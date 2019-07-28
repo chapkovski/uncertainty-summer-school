@@ -67,6 +67,14 @@ SESSION_CONFIGS = [
         'gender': False,
         'politics': True,
     },
+    {
+        'name': 'pggfg',
+        'display_name': "PGG with Punishment",
+        'num_demo_participants': 3,
+        'app_sequence': ['pggfg'],
+        'punishment_round': 2,
+
+    },
 ]
 
 # ISO-639 code

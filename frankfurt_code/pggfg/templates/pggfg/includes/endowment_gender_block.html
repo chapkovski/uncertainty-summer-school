@@ -1,0 +1,29 @@
+{% load otree %}
+<div class="card my-3">
+    <div class="card-body">
+        <h5 class="card-title">Информация о других участниках вашей группы:</h5>
+        <table class="table-hover table-stripped table">
+            <thead>
+            <th>Участник:</th>
+            <th>Начальная сумма</th>
+
+            {% if results|default_if_none:False %}
+                <th>Вложение в общий счет:</th>
+                <th>Доход:</th>
+            {% endif %}
+            </thead>
+            {% for o in player.get_others_in_group %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ o.endowment }}</td>
+
+                    {% if results|default_if_none:False %}
+                        <td>{{ o.contribution }}</td>
+                        <td>{{ o.payoff }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
