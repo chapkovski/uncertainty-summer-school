@@ -7,12 +7,16 @@
         </h3>
 
         <p>
+        
             In this study, you will be in a randomly formed group
             of {{ Constants.players_per_group }} participants. Each participant in
             the group is given
             {% if session.config.hetero_endowment %}
-                a random amount from {{ Constants.lb }} to {{ Constants.ub }}{% else %}
-                {{ Constants.endowment }}{% endif %}. The group
+                a random amount from {{ Constants.lb }} to {{ Constants.ub }}
+            {% else %}
+                {{ Constants.endowment }}
+            {% endif %}.
+            The group
             has the opportunity to undertake a joint project. Each participant in
             the group decides how much she or he is going to contribute to
             the project. Contribution could be any integer from 0
