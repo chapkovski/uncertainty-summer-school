@@ -6,6 +6,15 @@
     After every member of your group makes their contributions,
     each of you are able to observe the contributions of your group members
     and send them 'deduction tokens'. Each deduction token decreases your payoff
-    by 1 point, and decreases the other member's payoff by {{ Constants.punishment_factor|c }}.
+    by <strong>1 point</strong>, and decreases the other member's payoff by
+    <strong>{{ Constants.punishment_factor|c }}</strong>.
+
+</li>
+
+<li class="list-group-item">
+
+
+    Maximum amount you can spend on deduction for all other members of your group is
+    <strong>{{ player.punishment_endowment }}</strong>
 
 </li>

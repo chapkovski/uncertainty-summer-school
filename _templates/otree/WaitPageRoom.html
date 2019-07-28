@@ -1,0 +1,53 @@
+{% extends 'otree/WaitPage.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% block internal_scripts %}
+    {{ block.super }}
+    <!-- this is an HTML file rather than JavaScript static file because context variables need to be passed to it -->
+
+    <script type="text/javascript">
+        function heartbeat() {
+            var args = {
+                type: "GET",
+                url: '{% url "ParticipantRoomHeartbeat" view.tab_unique_id %}',
+                // necessary for IE
+                cache: false
+            };
+            $.ajax(args);
+        }
+
+        var SECOND = 1000;
+        window.setInterval(heartbeat, 10 * SECOND);
+    </script>
+
+{% endblock %}
+{% block title %}
+    Welcome to IMPRS-Uncertainty Summer School
+{% endblock %}
+{% block content %}
+    <div class="card border-0  ">
+        <div class="card-body border-0 ">
+
+            <div class="media">
+                <img src="https://i.pinimg.com/originals/f0/e4/26/f0e426cff53638945ca6ccfb9a0bda06.gif" class="mr-3"
+                     alt="rabbit"
+                     height="200px">
+                <div class="media-body ">
+                    <h5 class="mt-0   ">Please wait for the session to begin..</h5>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block internal_styles %}
+    {{ block.super }}
+    <style>
+        .vertical-center {
+
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+{% endblock %}
