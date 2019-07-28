@@ -2,11 +2,32 @@
 {% load otree static %}
 
 {% block title %}
-    Page title
+    Results
 {% endblock %}
 
 {% block content %}
-
+    <table class="table table-hover table-striped">
+        <tr>
+            <td>Your role:</td>
+            <td>Participant {{ player.get_role_desc }}</td>
+        </tr>
+        <tr>
+            <td>You sent to your partner</td>
+            <td>{{ group.send }}</td>
+        </tr>
+        <tr>
+            <td>
+                Your partner has sent you back:
+            </td>
+            <td>
+                {{ group.send_back }}
+            </td>
+        </tr>
+        <tr class="table-success">
+            <th>Your payoff:</th>
+            <th>{{ player.payoff }}</th>
+        </tr>
+    </table>
     {% next_button %}
 {% endblock %}
 

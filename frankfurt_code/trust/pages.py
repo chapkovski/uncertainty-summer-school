@@ -8,7 +8,7 @@ class Send(Page):
     form_fields = ['send']
 
     def is_displayed(self) -> bool:
-        return self.role() == 'trustor'
+        return self.player.role() == 'trustor'
 
 
 class WaitTrustorWP(WaitPage):
@@ -20,7 +20,7 @@ class SendBack(Page):
     form_fields = ['send_back']
 
     def is_displayed(self) -> bool:
-        return self.role() == 'trustee'
+        return self.player.role() == 'trustee'
 
 
 class ResultsWaitPage(WaitPage):
@@ -35,6 +35,7 @@ class Results(Page):
 
 page_sequence = [
     Send,
+    WaitTrustorWP,
     SendBack,
     ResultsWaitPage,
     Results

@@ -11,5 +11,5 @@ class PlayerBot(Bot):
         if self.player.role() == 'trustor':
             yield Send, {'send': random.randint(0, Constants.endowment)}
         else:
-            yield SendBack, {'send_back': random.randint(0, self.group.send_back)}
+            yield SendBack, {'send_back': random.randint(0, self.group.send*Constants.coef)}
         yield Results

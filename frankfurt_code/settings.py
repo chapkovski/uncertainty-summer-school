@@ -9,17 +9,17 @@ SESSION_CONFIG_DEFAULTS = {
     'real_world_currency_per_point': 1.00,
     'participation_fee': 0.00,
     'doc': "",
+    'use_browser_bots': False
 }
 
 SESSION_CONFIGS = [
-    #{
-    #    'name': 'public_goods',
-    #    'display_name': "Public Goods",
-    #    'num_demo_participants': 3,
-    #    'app_sequence': ['public_goods', 'payment_info'],
-    #},
+    {
+        'name': 'trust',
+        'display_name': "Trust game",
+        'num_demo_participants': 2,
+        'app_sequence': ['trust'],
+    },
 ]
-
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
