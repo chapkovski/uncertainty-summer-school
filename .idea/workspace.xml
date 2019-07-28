@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="193e21ef-2616-4c96-82ce-82eb26beaa86" name="Default Changelist" comment="" />
+    <list default="true" id="193e21ef-2616-4c96-82ce-82eb26beaa86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,15 +294,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564146096155</updated>
-      <workItem from="1564146099172" duration="17715000" />
+      <workItem from="1564146099172" duration="17862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17715000" />
+    <option name="totallyTimeSpent" value="17862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="727" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5867052" visible="true" weight="0.26817447" />
       <window_info id="Structure" order="1" sideWeight="0.4132948" side_tool="true" weight="0.26817447" />
