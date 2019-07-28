@@ -16,9 +16,9 @@ class Constants(BaseConstants):
     players_per_group = 3
     num_rounds = 1
     coef = 2
-    endowment = 20  # an endowment for fixed endowment treatment
-    lb = 10  # lower and upper boundaries for variable endowment treatment
-    ub = 30
+    endowment = c(20)  # an endowment for fixed endowment treatment
+    lb = c(10)  # lower and upper boundaries for variable endowment treatment
+    ub = c(30)
 
 
 class Subsession(BaseSubsession):
