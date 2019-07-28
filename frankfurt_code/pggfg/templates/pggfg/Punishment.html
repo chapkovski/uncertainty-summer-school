@@ -26,23 +26,18 @@
     <table class="table table-hover table-striped">
         <thead>
         <tr>
-            <th>Участник:</th>
-
-            <th>Начальная сумма</th>
-
-
-            <th>Вклад в общий счет</th>
-            <th>Ваше решение</th>
-            <th>Вычет из дохода участника:</th>
+            <th>Player:</th>
+            <th>Endowment</th>
+            <th>Contibution</th>
+            <th>Deduction tokens</th>
+            <th>Effect on their payoff:</th>
         </tr>
         </thead>
 
         {% for i,j in data %}
             <tr>
                 <td>{{ forloop.counter }}</td>
-
                 <td>{{ i.endowment }}</td>
-
                 <td>{{ i.contribution }}</td>
                 <td>{% formfield j label='' %}</td>
                 <td id="{{ j.id_for_label }}"></td>

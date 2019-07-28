@@ -27,7 +27,7 @@ class PlayerBot(Bot):
             pun_fields = ['pun{}'.format(p.id_in_group) for p in self.player.get_others_in_group()]
             _sum = self.player.punishment_endowment
 
-            answers = dict(zip(pun_fields, [1 for _ in pun_fields]))
+            answers = dict(zip(pun_fields, [random.randint(0, 2) for _ in pun_fields]))
             yield Punishment, {**answers}
         yield Results
         if self.round_number == Constants.num_rounds:

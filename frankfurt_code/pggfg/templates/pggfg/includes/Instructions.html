@@ -4,55 +4,40 @@
     <div class="card-body">
         <ul class="list-group list-group-flush mb-3">
             <li class="list-group-item">
-                Все участники случайным образом разбиты на группы по {{ Constants.players_per_group }} участника.
-                Состав групп не меняется на протяжении всего эксперимента.
-            </li>
-            <li class="list-group-item">
-                В каждом периоде вы получаете {{ player.endowment }}.
-                Вы принимаете решение, какую часть из этой суммы (в целых числах)
-                Вы хотите оставить у себя, а какую хотите вложить в общий проект вашей группы. Каждая единица ECU,
-                которую Вы оставили себе, приносит лично Вам 1 ECU в конце периода. Каждая единица ECU, вложенная в
-                общий
-                проект, приносит {{ Constants.coef_factor }} ECU как Вам, так и всем остальным членам группы. Иными
-                словами, за каждый ЭКЮ,
-                который вы вкладываете в общий проект, все члены всей группы получат {{ Constants.coef_factor }} ECU,
-                вне зависимости от того,
-                сколько они вложили.
+                In the beginning of each round every participant in your group
+                of {{ Constants.players_per_group }}
+                receives <strong>{{ Constants.endowment|c }}</strong>.
+
+
+                The group
+                has the opportunity to undertake a joint project. Each participant in
+                the group decides how much they are going to contribute to
+                the project. Contribution could be any integer from <strong>{{ 0|c }}</strong>
+                to
+                <strong>{{ Constants.endowment|c }}</strong>.
 
 
             </li>
             <li class="list-group-item">
-                Таким образом, Ваш доход в ECU за период формируется следующим образом:
+                The earnings from the project are calculated as follows: The
+                contributions of all <strong>{{ Constants.players_per_group }}</strong> participants are
+                added up, the total contribution
+                is multiplied by a factor of <strong>{{ Constants.efficiency_factor }}</strong>, and the
+                resulting amount is the total earnings from the project, which is
+                evenly split among all <strong>{{ Constants.players_per_group }}</strong>
+                participants. Your payoff equals your earnings from the project, plus
+                the amount you did not contribute.
             </li>
-            <li class="list-group-item text-center border font-weight-bold">
-                {{ player.endowment }} – Ваш вклад в общий проект + {{ Constants.coef_factor }} × (сумма вкладов всех
-                членов группы)
-            </li>
-            <li class="list-group-item">
-                Таким образом, ваш вклад за раунд может составлять любую сумму от 0 до {{ player.endowment }}. Все члены
-                группы
-                находятся в той же самой ситуации и принимают такие же решения.
-            </li>
+            {% if subsession.punishment %}
+                <li class="list-group-item">
 
-            <li class="list-group-item">
-                После каждого раунда Вам будет доступна информация о сумме, которую Вы вложили, о вкладах каждого из
-                {{ Constants.num_others_per_group }} других членов группы, Ваш доход от общего проекта, Ваш общий
-                выигрыш в текущем раунде и Ваш
-                совокупный общий выигрыш за все раунды. Кроме того, вы увидите график, показывающий Ваши вклады и
-                средние вклады других участников из вашей группы за все раунды.
-            </li>
+                    {% include 'pggfg/includes/punishment_instructions.html' %}
 
-
+                </li>
+            {% endif %}
             <li class="list-group-item">
                 {% include 'pggfg/includes/slider.html' %}
             </li>
-            {% if subsession.punishment %}
-
-                {% include 'pggfg/includes/punishment_instructions.html' %}
-
-
-            {% endif %}
-
         </ul>
     </div>
 </div>

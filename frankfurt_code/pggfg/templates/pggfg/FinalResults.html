@@ -2,17 +2,17 @@
 {% load otree %}
 
 {% block title %}
-    Итоги эксперимента:
+    Final results:
 {% endblock %}
 
 {% block inner_content %}
     <table class="table table-stripped table-hover">
         <tr>
-            <td colspan="2" class="text-center font-weight-bold">Ваши доходы в каждом периоде:</td>
+            <td colspan="2" class="text-center font-weight-bold">Your payoffs in each period:</td>
         </tr>
         <tr>
-            <th>Период:</th>
-            <th>Доход:</th>
+            <th>Period:</th>
+            <th>Payoff:</th>
         </tr>
         {% for foo in player.in_all_rounds %}
             <tr>
@@ -22,22 +22,22 @@
 
         {% endfor %}
         <tr class="table-success">
-            <th class="text-center font-weight-bold">Общий доход:</th>
+            <th class="text-center font-weight-bold">Total payoff:</th>
             <th>{{ participant.payoff }}</th>
         </tr>
     </table>
 
-    <h4 class="my-3">Общий выигрыш:</h4>
+    <h4 class="my-3">Final payoff:</h4>
     <table class="table table-hover table-striped table-bordered">
 
 
         <tr>
-            <td>Выигрыш в эксперименте:</td>
+            <td>Payoff in the study:</td>
             <td>{{ real_payoff }}</td>
         </tr>
 
         <tr class="table-success">
-            <th>Общая выплата:</th>
+            <th>Final amount:</th>
             <th>{{ participant.payoff_plus_participation_fee }}</th>
         </tr>
     </table>

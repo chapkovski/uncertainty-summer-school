@@ -2,11 +2,10 @@
 
 <li class="list-group-item">
 
-    После того, как все участники примут свои решения о вкладе, каждый из вас имеет возможность сделать
-    <strong>вычет</strong> из доходов
-    другого участника. Вы можете потратить на вычеты от <strong>{{ 0|c }}</strong> до максимум
-    <strong>{{ player.punishment_endowment }}</strong> из вашего дохода в текущем периоде. Каждое
-    ECU, которое вы потратите на вычет у другого участника, уменьшит его или ее доход в данном периоде на
-    <strong>{{ Constants.punishment_factor|c }}</strong>. Другие
-    игроки могут то же самое сделать с вашим доходом.
+
+    After every member of your group makes their contributions,
+    each of you are able to observe the contributions of your group members
+    and send them 'deduction tokens'. Each deduction token decreases your payoff
+    by 1 point, and decreases the other member's payoff by {{ Constants.punishment_factor|c }}.
+
 </li>

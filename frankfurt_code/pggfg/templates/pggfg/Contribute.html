@@ -2,13 +2,13 @@
 {% load otree %}
 
 {% block title %}
-    Часть 1: Вложение в общий счет (Период {{ player.round_number }} из
+    Stage 1: Contribution (Period {{ player.round_number }} of
     {{ Constants.num_rounds }})
 {% endblock %}
 
 {% block inner_content %}
 
-    <div class="alert alert-info">Начальная сумма: <strong>{{ player.endowment }}</strong></div>
+    <div class="alert alert-info">Endowment: <strong>{{ player.endowment }}</strong></div>
     {% formfield player.contribution with label=label %}
 
     {% next_button %}
@@ -20,7 +20,7 @@
             var categories = {{ player.charts.rounds|json }};
             var group_average = {{player.charts.group_average|json}};
             var individual_contributions ={{player.charts.individual_contributions|json}};
-            var chart_title = 'Вложения в общий счет в предыдущих периодах';
+            var chart_title = 'Contributions in previous periods';
         </script>
         <script src="{% static "js/contribution_chart.js" %}"></script>
     {% endif %}

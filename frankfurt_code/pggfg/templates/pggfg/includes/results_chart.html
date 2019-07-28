@@ -11,7 +11,7 @@
         $(function () {
             $('#highcharts-container').highcharts({
                 title: {
-                    text: 'Вложения в общий счет'
+                    text: 'Contributions'
                 },
                 credits: {
                     enabled: false
@@ -22,7 +22,7 @@
                 },
                 xAxis: {
 
-                    title: {text: 'Период'},
+                    title: {text: 'Period'},
                     allowDecimals: false,
                     categories: {{ player.charts.rounds|json }},
                 },
@@ -35,7 +35,7 @@
                 tooltip: {
                     crosshairs: true,
                     headerFormat: '<b>{point.series.name}</b><br />',
-                    pointFormat: 'Вклад: <b>{point.y}</b> '
+                    pointFormat: 'Contribution: <b>{point.y}</b> '
                 },
                 legend: {
                     layout: 'horizontal',
@@ -45,7 +45,7 @@
                 },
                 series: [
                     {
-                        'name': 'Средний вклад по вашей группе',
+                        'name': 'Average contribution of your group',
                         'type': 'line',
                         'data': {{player.charts.group_average|json}},
                         'marker': {
@@ -53,7 +53,7 @@
                         }
                     },
                     {
-                        'name': 'Ваши вложения в общий счет',
+                        'name': 'Your contributions',
                         'type': 'line',
                         'data': {{player.charts.individual_contributions|json}},
                         'marker': {
