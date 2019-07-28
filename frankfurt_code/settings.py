@@ -33,6 +33,40 @@ SESSION_CONFIGS = [
         'app_sequence': ['pgg'],
         'hetero_endowment': True,
     },
+    {
+        'name': 'q',
+        'display_name': "Questionnaire",
+        'num_demo_participants': 1,
+        'app_sequence': ['q'],
+
+    },
+    {
+        'name': 'pggmatch',
+        'display_name': "PGG Match",
+        'num_demo_participants': 3,
+        'app_sequence': ['q', 'pggmatch'],
+        'random': True,
+        'gender': False,
+        'polity': False,
+    },
+    {
+        'name': 'pggmatchgender',
+        'display_name': "PGG Random Match by gender",
+        'num_demo_participants': 3,
+        'app_sequence': ['q', 'pggmatch'],
+        'random': False,
+        'gender': True,
+        'politics': False,
+    },
+    {
+        'name': 'pggmatchpolity',
+        'display_name': "PGG Match by political preferences",
+        'num_demo_participants': 3,
+        'app_sequence': ['q', 'pggmatch'],
+        'random': True,
+        'gender': False,
+        'politics': True,
+    },
 ]
 
 # ISO-639 code

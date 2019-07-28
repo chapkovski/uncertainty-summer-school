@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Final results
+{% endblock %}
+
+{% block content %}
+    <table class="table table-hover table-striped">
+        <thead>
+        <th>
+            Period
+        </th>
+        <th>Contribution</th>
+        <th>Payoff</th>
+        </thead>
+    <tbody>
+    {% for p in player.in_all_rounds %}
+        <tr>
+        <td>{{ p.round_number }}</td>
+        <td>{{ p.contribution }}</td>
+        <td>{{ p.payoff }}</td>
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+    {% next_button %}
+
+{% endblock %}

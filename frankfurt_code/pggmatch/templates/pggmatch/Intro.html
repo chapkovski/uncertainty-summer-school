@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+    {% include 'pggmatch/includes/instructions.html' %}
+    {% next_button %}
+
+{% endblock %}
