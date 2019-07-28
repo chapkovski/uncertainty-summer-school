@@ -19,6 +19,20 @@ SESSION_CONFIGS = [
         'num_demo_participants': 2,
         'app_sequence': ['trust'],
     },
+    {
+        'name': 'pgg',
+        'display_name': "Public goods - fixed endowment",
+        'num_demo_participants': 3,
+        'app_sequence': ['pgg'],
+        'hetero_endowment': False,
+    },
+    {
+        'name': 'pgghetero',
+        'display_name': "Public goods - random endowment",
+        'num_demo_participants': 3,
+        'app_sequence': ['pgg'],
+        'hetero_endowment': True,
+    },
 ]
 
 # ISO-639 code

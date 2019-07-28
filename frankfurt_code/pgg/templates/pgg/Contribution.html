@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   Contribution
+{% endblock %}
+
+{% block content %}
+    {% formfield player.contribution label=contribution_label %}
+    {% next_button %}
+
+{% endblock %}
