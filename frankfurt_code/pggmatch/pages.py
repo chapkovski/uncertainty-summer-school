@@ -7,7 +7,7 @@ class MatchingWP(WaitPage):
     group_by_arrival_time = True
 
     def is_displayed(self) -> bool:
-        return self.round_number == 1
+        return self.round_number == 1 and not self.subsession.random
 
     def get_players_for_group(self, waiting_players):
         women = [p for p in waiting_players if p.participant.vars['gender'] == 'Female']

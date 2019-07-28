@@ -6,20 +6,6 @@ import random
 from django.core import validators
 
 
-class Welcome(Page):
-    def is_displayed(self) -> bool:
-        return self.round_number == 1
-
-    def vars_for_template(self) -> dict:
-        rate = c(self.session.config['real_world_currency_per_point'])
-        rate = rate.to_real_world_currency(self.session)
-        return {'rate': rate}
-
-
-class StartWP(WaitPage):
-    pass
-
-
 class Intro(Page):
     template_name = 'pggfg/Introduction.html'
 
@@ -37,7 +23,7 @@ class Contribute(Page):
     form_fields = ['contribution']
 
     def vars_for_template(self):
-        label = f'Сколько вы вкладываете в общий счет (от 0 до {self.player.endowment})?'
+        label = f'How much you would like to contribute to the common project (from 0 to {self.player.endowment})?'
         return {'label': label, }
 
     def contribution_max(self):
@@ -67,7 +53,7 @@ class Punishment(Page):
     def error_message(self, values):
         tot_pun = sum([int(i) for i in values.values()])
         if tot_pun > self.player.punishment_endowment:
-            return f'Вы не можете послать вычетов больше чем {self.player.punishment_endowment}'
+            return f'You cannot spend  more than {self.player.punishment_endowment} on deduction'
 
 
 class AfterPunishmentWP(WaitPage):
@@ -88,8 +74,7 @@ class FinalResults(Page):
 
 
 page_sequence = [
-    Welcome,
-    StartWP,
+
     Intro,
     IntroPunishment,
     Contribute,

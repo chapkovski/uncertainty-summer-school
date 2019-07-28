@@ -14,23 +14,29 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'pggmatch'
     players_per_group = 3
-    num_rounds = 1
+    num_rounds = 4
     coef = 2
     endowment = c(20)  # an endowment for fixed endowment treatment
     lb = c(10)  # lower and upper boundaries for variable endowment treatment
     ub = c(30)
+    shuffling_rounds = [1, 3]
 
 
 class Subsession(BaseSubsession):
     politics = models.BooleanField()
     random = models.BooleanField()
     gender = models.BooleanField()
+
     def creating_session(self):
         self.politics = self.session.config.get('politics')
         self.gender = self.session.config.get('gender')
         self.random = self.session.config.get('random')
         if self.random:
-            self.group_randomly()
+            if self.round_number in Constants.shuffling_rounds:
+                self.group_randomly()
+            else:
+                highest_shuffling_round = max(i for i in Constants.shuffling_rounds if i < self.round_number)
+                self.group_like_round(highest_shuffling_round)
 
         for p in self.get_players():
             p.endowment = Constants.endowment

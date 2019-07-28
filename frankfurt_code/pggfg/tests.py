@@ -13,7 +13,6 @@ class PlayerBot(Bot):
     def play_round(self):
         print(Fore.BLUE + Back.YELLOW + 'ROUND NUMBER::', self.round_number)
         if self.round_number == 1:
-            yield Welcome
             yield Intro
 
         if self.round_number == self.session.config['punishment_round']:

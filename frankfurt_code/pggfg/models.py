@@ -68,11 +68,6 @@ class Group(BaseGroup):
             p.set_payoff()
 
 
-YOUR_PROFIT_LABEL = "Каким будет Ваш общий выигрыш в текущем периоде?"
-AVERAGE_OTHER_PROF_LABEL = "Каким будет средний выигрыш двух других участников из вашей группы в текущем периоде (ECU)?"
-SECOND_PROF_LABEL = "Каким будет общий выигрыш второго участника из вашей группы в текущем периоде (ECU)?"
-THIRD_PROF_LABEL = "Каким будет общий выигрыш третьего участника из вашей группы в текущем периоде (ECU)?"
-
 
 class Player(BasePlayer):
     endowment = models.CurrencyField()

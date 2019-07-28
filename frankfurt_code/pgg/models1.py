@@ -1,10 +1,19 @@
-class Group(BaseGroup):
-    total_contribution = models.CurrencyField()
-    individual_share = models.CurrencyField()
+class Constants(BaseConstants):
+    POLITY_CHOICES = [(0, 'Donald Trump'), (1, 'Joe Biden'), (2, 'Another candidate')]
 
-    def set_payoffs(self):
-        contribs = [p.contribution for p in self.get_players()]
-        self.total_contribution = sum(contribs)
-        self.individual_share = self.total_contribution * Constants.coef / Constants.players_per_group
+
+class Subsession(BaseSubsession):
+    def creating_session(self):
         for p in self.get_players():
-            p.payoff = p.endowment - p.contribution + self.individual_share
+            choices = Constants.POLITY_CHOICES.copy()
+            random.shuffle(choices)
+            p.participant.vars['politics_choices'] = choices
+            p.politics_set = str(choices)
+
+
+class Player(BasePlayer):
+    politics = models.IntegerField(widget=widgets.RadioSelect)
+    politics_set = models.StringField()
+
+    def politics_choices(self):
+        return self.participant.vars['politics_choices']
