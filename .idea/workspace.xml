@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="193e21ef-2616-4c96-82ce-82eb26beaa86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frankfurt_code/q/templates/q/Q.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frankfurt_code/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/frankfurt_code/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presentations/frankfurt_july_2019 day3.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/presentations/frankfurt_july_2019 day3.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankfurt_code/q/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/frankfurt_code/q/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentations/frankfurt_july_2019 day4.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/presentations/frankfurt_july_2019 day4.pptx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frankfurt_code/pggmatch/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="224">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
               <folding>
                 <element signature="e#0#134#0" expanded="true" />
               </folding>
@@ -67,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frankfurt_code/pggmatch/pages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="285">
               <caret line="19" column="112" selection-start-line="19" selection-start-column="112" selection-end-line="19" selection-end-column="112" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
@@ -100,11 +97,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frankfurt_code/q/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#134#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,16 +152,16 @@
         <option value="$PROJECT_DIR$/frankfurt_code/pgg/models1.py" />
         <option value="$PROJECT_DIR$/frankfurt_code/pgg/templates/pgg/includes/instructions.html" />
         <option value="$PROJECT_DIR$/frankfurt_code/pgg/templates/pgg/Results.html" />
-        <option value="$PROJECT_DIR$/frankfurt_code/q/models.py" />
         <option value="$PROJECT_DIR$/frankfurt_code/q/pages.py" />
         <option value="$PROJECT_DIR$/frankfurt_code/q/templates/q/Q.html" />
         <option value="$PROJECT_DIR$/frankfurt_code/q/tests.py" />
         <option value="$PROJECT_DIR$/frankfurt_code/pggmatch/templates/pggmatch/includes/instructions.html" />
         <option value="$PROJECT_DIR$/frankfurt_code/pggmatch/templates/pggmatch/Contribution.html" />
         <option value="$PROJECT_DIR$/frankfurt_code/pggmatch/templates/pggmatch/Intro.html" />
-        <option value="$PROJECT_DIR$/frankfurt_code/pggmatch/models.py" />
         <option value="$PROJECT_DIR$/frankfurt_code/settings.py" />
         <option value="$PROJECT_DIR$/frankfurt_code/pggmatch/pages.py" />
+        <option value="$PROJECT_DIR$/frankfurt_code/pggmatch/models.py" />
+        <option value="$PROJECT_DIR$/frankfurt_code/q/models.py" />
       </list>
     </option>
   </component>
@@ -193,31 +193,7 @@
               <item name="frankfurt_july_2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="frankfurt_july_2019" type="462c0819:PsiDirectoryNode" />
               <item name="frankfurt_code" type="462c0819:PsiDirectoryNode" />
-              <item name="pggmatch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frankfurt_july_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frankfurt_july_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="frankfurt_code" type="462c0819:PsiDirectoryNode" />
-              <item name="pggmatch" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frankfurt_july_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frankfurt_july_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="frankfurt_code" type="462c0819:PsiDirectoryNode" />
-              <item name="pggmatch" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pggmatch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="frankfurt_july_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frankfurt_july_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="frankfurt_code" type="462c0819:PsiDirectoryNode" />
-              <item name="pggmatch" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pggmatch" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="q" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,18 +246,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564146096155</updated>
-      <workItem from="1564146099172" duration="11592000" />
+      <workItem from="1564146099172" duration="12324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11592000" />
+    <option name="totallyTimeSpent" value="12324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5867052" visible="true" weight="0.26817447" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5867052" visible="true" weight="0.26817447" />
       <window_info id="Structure" order="1" sideWeight="0.4132948" side_tool="true" visible="true" weight="0.26817447" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -295,7 +271,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43464053" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43464053" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3293348" />
       <window_info anchor="right" id="R Graphics" />
@@ -537,29 +513,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frankfurt_code/q/models.py">
+    <entry file="file://$PROJECT_DIR$/frankfurt_code/pggmatch/pages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="285">
+          <caret line="19" column="112" selection-start-line="19" selection-start-column="112" selection-end-line="19" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frankfurt_code/pggmatch/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="224">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
           <folding>
             <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frankfurt_code/pggmatch/pages.py">
+    <entry file="file://$PROJECT_DIR$/frankfurt_code/q/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="19" column="112" selection-start-line="19" selection-start-column="112" selection-end-line="19" selection-end-column="112" />
+        <state relative-caret-position="221">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
