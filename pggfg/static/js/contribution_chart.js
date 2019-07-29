@@ -17,7 +17,7 @@ $('#highcharts-container').highcharts({
     },
     yAxis: {
         title: {
-            text: 'ECU'
+            text: 'Points'
         },
 
     },

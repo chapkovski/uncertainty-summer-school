@@ -3,7 +3,6 @@ from otree.api import (
     Currency as c, currency_range
 )
 
-
 author = 'Your name here'
 
 doc = """
@@ -26,4 +25,4 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    age = models.IntegerField(min=18, max=100, label='How old are you?')

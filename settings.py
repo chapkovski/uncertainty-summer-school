@@ -14,6 +14,12 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'my_first_app',
+        'display_name': "First app",
+        'num_demo_participants': 1,
+        'app_sequence': ['my_first_app'],
+    },
+    {
         'name': 'trust',
         'display_name': "Trust game",
         'num_demo_participants': 2,

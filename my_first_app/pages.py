@@ -4,13 +4,11 @@ from .models import Constants
 
 
 class MyPage(Page):
-    pass
+    form_model = 'player'
+    form_fields = ['age']
 
 
-class ResultsWaitPage(WaitPage):
 
-    def after_all_players_arrive(self):
-        pass
 
 
 class Results(Page):
@@ -19,6 +17,5 @@ class Results(Page):
 
 page_sequence = [
     MyPage,
-    ResultsWaitPage,
     Results
 ]
