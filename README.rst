@@ -10,3 +10,6 @@ The games are in the `frankfurt_code` folder.
 * Download the repository, unzip it
 * Navigate in your terminal/PowerShell/Command line to the unzipped folder
 * Run ``otree devserver`` to test the games mentioned in the course
+
+
+The demo is availablee at `Heroku here <https://imprs-uncertainty.herokuapp.com/demo/>`_.
