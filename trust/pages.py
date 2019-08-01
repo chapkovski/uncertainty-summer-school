@@ -3,6 +3,10 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
+class Intro(Page):
+    pass
+
+
 class Send(Page):
     form_model = 'group'
     form_fields = ['send']
@@ -11,8 +15,10 @@ class Send(Page):
         return self.player.role() == 'trustor'
 
 
-class WaitTrustorWP(WaitPage):
-    pass
+class BeforeSendBackWP(WaitPage):
+
+    def vars_for_template(self):
+        return {'body_text': f'Please wait for Participant {self.player.get_other().get_role_desc()}'}
 
 
 class SendBack(Page):
@@ -34,8 +40,9 @@ class Results(Page):
 
 
 page_sequence = [
+    Intro,
     Send,
-    WaitTrustorWP,
+    BeforeSendBackWP,
     SendBack,
     ResultsWaitPage,
     Results

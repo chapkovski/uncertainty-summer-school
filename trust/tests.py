@@ -8,6 +8,7 @@ import random
 class PlayerBot(Bot):
 
     def play_round(self):
+        yield Intro
         if self.player.role() == 'trustor':
             yield Send, {'send': random.randint(0, Constants.endowment)}
         else:

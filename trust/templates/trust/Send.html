@@ -7,6 +7,17 @@
 
 {% block content %}
     {% formfields %}
+    <div class="alert alert-info">Participant {{ player.get_other.get_role_desc }} will receive:
+        <strong><span id="mult"></span></strong></div>
     {% next_button %}
+{% include 'trust/includes/instructions.html' %}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#id_send').on('input', function () {
+            $('#mult').html($(this).val() *{{ Constants.coef }})
+        })
+    </script>
 
 {% endblock %}

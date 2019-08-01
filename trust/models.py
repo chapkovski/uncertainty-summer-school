@@ -14,7 +14,7 @@ class Constants(BaseConstants):
     name_in_url = 'trust'
     players_per_group = 2
     num_rounds = 1
-    endowment = 10
+    endowment = c(10)
     coef = 3
     role_desc = {'trustor': 'A',
                  'trustee': 'B'}
@@ -26,7 +26,8 @@ class Subsession(BaseSubsession):
 
 class Group(BaseGroup):
     send = models.CurrencyField(doc='amount sent by trustor',
-                                label='How much money you would like to send to your partner?',
+                                label=f'How much money you would like to send to'
+                                f' your partner (from 0 to {Constants.endowment})?',
                                 min=0, max=Constants.endowment)
     send_back = models.CurrencyField(doc='amount sent back by trustee',
                                      label='How much money you would like to send back?', min=0)
@@ -49,3 +50,6 @@ class Player(BasePlayer):
         if self.id_in_group == 1:
             return 'trustor'
         return 'trustee'
+
+    def get_other(self):
+        return self.get_others_in_group()[0]

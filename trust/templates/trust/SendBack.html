@@ -6,7 +6,10 @@
 {% endblock %}
 
 {% block content %}
+    <div class="alert alert-info">
+        You received {{ group.send_back_max }} from Participant {{ player.get_other.get_role_desc }}.
+    </div>
     {% formfields %}
     {% next_button %}
-
+    {% include 'trust/includes/instructions.html' %}
 {% endblock %}
