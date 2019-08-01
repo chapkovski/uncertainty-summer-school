@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Comprehension question
+{% endblock %}
+
+{% block content %}
+    {% formfields %}
+    {% next_button %}
+    {% include 'trust/includes/instructions.html' %}
+{% endblock %}

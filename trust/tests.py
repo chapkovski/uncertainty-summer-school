@@ -9,8 +9,9 @@ class PlayerBot(Bot):
 
     def play_round(self):
         yield Intro
+        yield CQ, {'cq1': 3 * Constants.coef}
         if self.player.role() == 'trustor':
             yield Send, {'send': random.randint(0, Constants.endowment)}
         else:
-            yield SendBack, {'send_back': random.randint(0, self.group.send*Constants.coef)}
+            yield SendBack, {'send_back': random.randint(0, self.group.send * Constants.coef)}
         yield Results

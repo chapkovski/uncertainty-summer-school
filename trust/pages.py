@@ -6,6 +6,9 @@ from .models import Constants
 class Intro(Page):
     pass
 
+class CQ(Page):
+    form_model = 'player'
+    form_fields = ['cq1']
 
 class Send(Page):
     form_model = 'group'
@@ -41,6 +44,7 @@ class Results(Page):
 
 page_sequence = [
     Intro,
+    CQ,
     Send,
     BeforeSendBackWP,
     SendBack,

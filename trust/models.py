@@ -43,6 +43,13 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    cq1 = models.IntegerField(
+        label=f'If participant A sends {c(3)} to participant B, how much the Participant B will get?')
+
+    def cq1_error_message(self, value):
+        if value != 3 * Constants.coef:
+            return 'Please check your answer!'
+
     def get_role_desc(self):
         return Constants.role_desc[self.role()]
 
